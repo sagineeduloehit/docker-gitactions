@@ -4,8 +4,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm cache clean --force
-RUN npm install --include=dev
+RUN npm install
 
 COPY . .
 RUN npm run build
